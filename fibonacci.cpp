@@ -44,6 +44,7 @@ int main(){
 //Space Complexity O(N)
 
 int fibBU(int n){
+	if(n==0 or n===1)return n;
 	int dp[100];
 	for(int i=0;i<n;i++)
 		dp[i]=dp[i-1]+dp[i-2];
@@ -59,9 +60,11 @@ int main(){
 	return 0;
 }
 
-//bottom up with space optmisation.. O(n)
+//bottom up with space optmisation.. O(1)
 
 int fibSpaceOpt(int n){
+	if(n==0 or n==1)
+		return n;
 	int a=0;
 	int b=1;
 	int c;
